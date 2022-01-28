@@ -4,7 +4,7 @@ import java.lang.reflect.*;
 public class CustomAnimation {
 	
 	public static void readAnnotation(Method[] methods) {
-		System.out.println("Method Annotations");
+		System.out.println("\n\nMethod Annotations");
 		System.out.println("------------------");
 		for(Method method : methods) {
 			Annotation[] methodAnnotations = method.getAnnotations();
@@ -22,8 +22,8 @@ public class CustomAnimation {
 
 	}
 	
-	public static void readAnnotation(Class<?> clas) {
-		System.out.println("\n\nClass Annotations");
+	public static void readAnnotation(Class clas) {
+		System.out.println("Class Annotations");
 		System.out.println("------------------");
 		Annotation[] classAnnotations = clas.getAnnotations();
 		for(Annotation annotation : classAnnotations) {
@@ -40,7 +40,7 @@ public class CustomAnimation {
 	}
 	
 	public static void main(String[] args) throws ClassNotFoundException {
-		Class<?> clas = Class.forName("AnnotatedClass");
+		Class clas = Class.forName("AnnotatedClass");
 		Method[] methods = clas.getDeclaredMethods();
 		readAnnotation(clas);
 		readAnnotation(methods);
