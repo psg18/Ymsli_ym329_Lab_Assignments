@@ -16,8 +16,8 @@ public class ques1 {
 	public static void main(String[] args) {
 		System.out.print("1 1");
 		printFibonacci(18);
-		System.out.println();
 		System.out.print("avg: "+ (float)sum/20);
 	}
 
 }
+
